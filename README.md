@@ -12,6 +12,6 @@ public class Order {
 }
 ```
 
-The code editor contains an Order class to track retail shipments.
+The code editor contains an `Order` class to track retail shipments.
 
-Write an if-then statement that prints High value item! when itemCost is greater than 24.00.
+Write an `if-then` statement that prints `High value item!` when `itemCost` is greater than `24.00`.
