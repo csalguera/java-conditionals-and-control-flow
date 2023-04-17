@@ -6,5 +6,10 @@ public class Order {
     }
 
     boolean isFilled = false;
+    if (isFilled) {
+      System.out.println("Shipping");
+    } else {
+      System.out.println("Order not ready");
+    }
   }
 }
