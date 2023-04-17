@@ -64,5 +64,31 @@ public class App {
       System.out.println("Express checkout not available");
     }
     // Since condition is not met, nothing is printed
+
+    /*
+     * ------------
+     * If-Then-Else
+     * ------------
+     * 
+     * We can create an alternate conditional branch with the else keyword:
+     */
+
+    boolean hasPrerequisite = true;
+
+    if (hasPrerequisite) {
+      // Enroll in course
+      System.out.println("Enrolled in course!");
+    } else {
+      // Enroll in prerequisite
+      System.out.println("Enrolled in prerequisite!");
+    }
+
+    /*
+     * This conditional statement ensures that exactly one code block will be run
+     * if the condition, hasPrerequisites, is false, the code block after else runs
+     * 
+     * The first code block runs if the condition evaluates to true
+     * The second code block runs if the condition evaluates to false
+     */
   }
 }

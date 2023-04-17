@@ -4,5 +4,7 @@ public class Order {
     if (itemCost > 24.00) {
       System.out.println("High value item!");
     }
+
+    boolean isFilled = false;
   }
 }
