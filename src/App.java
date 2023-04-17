@@ -90,5 +90,40 @@ public class App {
      * The first code block runs if the condition evaluates to true
      * The second code block runs if the condition evaluates to false
      */
+
+    /*
+     * ---------------
+     * If-Then-Else-If
+     * ---------------
+     * 
+     * The conditional structure we've learned can be chained together to check as many conditions as required by our program.
+     */
+
+    String course = "Theatre";
+
+    if (course.equals("Biology")) {
+      // Enroll in Biology course
+    } else if (course.equals("Algebra")) {
+      // Enroll in Algebra course
+    } else if (course.equals("Theatre")) {
+      // Enroll in Theatre course
+    } else {
+      System.out.println("Course not found!");
+    }
+
+    int testScore = 72;
+
+    if (testScore >= 90) {
+      System.out.println("A");
+    } else if (testScore >= 80) {
+      System.out.println("B");
+    } else if (testScore >= 70) {
+      System.out.println("C");
+    } else if (testScore >= 60) {
+      System.out.println("D");
+    } else {
+      System.out.println("F");
+    }
+    // prints: C
   }
 }

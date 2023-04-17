@@ -39,3 +39,57 @@ public class Order {
 
 * When `isFilled` is `true`, print `Shipping`.
 * When `isFilled` is `false`, print `Order not ready`.
+
+## If-Then-Else-If
+
+```
+public class Order {
+  boolean isFilled;
+  double billAmount;
+  String shipping;
+  
+  public Order(boolean filled, double cost, String shippingMethod) {
+		if (cost > 24.00) {
+      System.out.println("High value item!");
+    }
+    isFilled = filled;
+    billAmount = cost;
+    shipping = shippingMethod;
+  }
+  
+  public void ship() {
+    if (isFilled) {
+      System.out.println("Shipping");
+      System.out.println("Shipping cost: " + calculateShipping());
+    } else {
+      System.out.println("Order not ready");
+    }
+  }
+  
+  public double calculateShipping() {
+	 	// declare conditional statement here
+    
+ 	}
+  
+  public static void main(String[] args) {
+    // do not alter the main method!
+    Order book = new Order(true, 9.99, "Express");
+    Order chemistrySet = new Order(false, 72.50, "Regular");
+    
+    book.ship();
+    chemistrySet.ship();
+  }
+}
+```
+
+1. We need to calculate the shipping costs for our orders.
+
+    There’s a new instance field, `String` `shipping`, that we use to calculate the cost.
+
+    Use a chained `if-then-else` to check for different values within the `calculateShipping()` method.
+
+    When the `shipping` instance field equals `Regular`, the method should return `0`.
+
+    When the `shipping` instance field equals `Express`, the method should return `1.75`.
+
+    Else the method should return `.50`.
