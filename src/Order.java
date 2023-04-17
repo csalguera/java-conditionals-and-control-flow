@@ -23,7 +23,13 @@ public class Order {
   
   public double calculateShipping() {
 	 	// declare conditional statement here
-    
+    if (shipping.equals("Regular")) {
+      return 0;
+    } else if (shipping.equals("Express")) {
+      return 1.75;
+    } else {
+      return 0.5;
+    }
   }
   
   public static void main(String[] args) {
