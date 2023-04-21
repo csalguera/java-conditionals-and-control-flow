@@ -203,5 +203,14 @@ public class App {
      * 
      * Without break, code below the matching case label is run, including code under other case labels
      */
+
+    /*
+     * ------
+     * Review
+     * ------
+     * 
+     * Conditional statements add branching paths to our programs
+     * We use conditionals to make decisions in the program so that different inputs will produce different results
+     */
   }
 }
