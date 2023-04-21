@@ -27,13 +27,15 @@ public class Order {
     if (shipping.equals("Regular")) {
       return 0;
     } else if (shipping.equals("Express")) {
-      // Add your code here
-
-      
+      if (couponCode.equals("ship50")) {
+        return 0.85;
+      } else {
+        return 1.75;
+      }
     } else {
       return .50;
     }
- 	}
+  }
   
   public static void main(String[] args) {
     // do not alter the main method!
