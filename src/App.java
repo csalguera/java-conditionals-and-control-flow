@@ -162,5 +162,46 @@ public class App {
         System.out.println("Leave your umbrella home.");
       }
     }
+
+    /*
+     * ----------------
+     * Switch Statement
+     * ----------------
+     * 
+     * An alternative to chaining if-then-else conditions is to use the switch statement
+     * This conditional will check a given value against any number of conditions and run the code block where there is a match
+     */
+
+    String historyCourse = "History";
+
+    switch (historyCourse) {
+      case "Algebra":
+        // Enroll in Algebra
+        break;
+      case "Bilogoy":
+        // Enroll in Biology
+        break;
+      case "History":
+        // Enroll in History
+        break;
+      case "Theatre":
+        // Enroll in Theatre
+        break;
+      default:
+        System.out.println("Course not found");
+    }
+
+    /*
+     * This example enrolls the student in History class by checking the value contained in the parentheses, historyCourse, against each of the case labels
+     * If the value after the case label matches the value within the parentheses, the switch block is run
+     * 
+     * In the above example, historyCourse references the string "History", which matches case "History":
+     * 
+     * When no value matches, the default block runs. Akin to an else statement
+     * 
+     * Switch blocks are different from other code blocks because they are not marked by curly braces and we use the break keyword to exit the switch statement
+     * 
+     * Without break, code below the matching case label is run, including code under other case labels
+     */
   }
 }

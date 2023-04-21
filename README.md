@@ -14,7 +14,7 @@ public class Order {
 
 1. The code editor contains an `Order` class to track retail shipments.
 
-    Write an `if-then` statement that prints `High value item!` when `itemCost` is greater than `24.00`.
+    Write an `if-then` statement that prints `"High value item!"` when `itemCost` is greater than `24.00`.
 
 ## If-Then-Else
 
@@ -37,8 +37,8 @@ public class Order {
 
     Write an if-then-else statement that:
 
-* When `isFilled` is `true`, print `Shipping`.
-* When `isFilled` is `false`, print `Order not ready`.
+* When `isFilled` is `true`, print `"Shipping"`.
+* When `isFilled` is `false`, print `"Order not ready"`.
 
 ## If-Then-Else-If
 
@@ -88,9 +88,9 @@ public class Order {
 
     Use a chained `if-then-else` to check for different values within the `calculateShipping()` method.
 
-    When the `shipping` instance field equals `Regular`, the method should return `0`.
+    When the `shipping` instance field equals `"Regular"`, the method should return `0`.
 
-    When the `shipping` instance field equals `Express`, the method should return `1.75`.
+    When the `shipping` instance field equals `"Express"`, the method should return `1.75`.
 
     Else the method should return `.50`.
 
@@ -145,10 +145,66 @@ public class Order {
 }
 ```
 
-1. The company offers a temporary deal that, if the consumer uses the coupon `ship50`, the company will reduce the express shipping price.
+1. The company offers a temporary deal that, if the consumer uses the coupon `"ship50"`, the company will reduce the express shipping price.
 
-    Let’s rewrite the body of `else`-`if` statement from the last exercise. Inside the `else`-`if` statement, create a nested `if`-`then` statement that checks if `couponCode` equals `ship50`.
+    Let’s rewrite the body of `else`-`if` statement from the last exercise. Inside the `else`-`if` statement, create a nested `if`-`then` statement that checks if `couponCode` equals `"ship50"`.
 
     If the nested condition is `true`, return the value `.85`.
 
     If the condition is `false`, use a nested `else` statement to return the value `1.75`.
+
+## Switch Statement
+
+```
+public class Order {
+  boolean isFilled;
+  double billAmount;
+  String shipping;
+  
+  public Order(boolean filled, double cost, String shippingMethod) {
+		if (cost > 24.00) {
+      System.out.println("High value item!");
+    }
+    isFilled = filled;
+    billAmount = cost;
+    shipping = shippingMethod;
+  }
+  
+  public void ship() {
+    if (isFilled) {
+      System.out.println("Shipping");
+      System.out.println("Shipping cost: " + calculateShipping());
+    } else {
+      System.out.println("Order not ready");
+    }
+  }
+  
+  public double calculateShipping() {
+    double shippingCost;
+	 	// declare switch statement here
+    
+    
+    return shippingCost;
+ 	}
+  
+  public static void main(String[] args) {
+    // do not alter the main method!
+    Order book = new Order(true, 9.99, "Express");
+    Order chemistrySet = new Order(false, 72.50, "Regular");
+    
+    book.ship();
+    chemistrySet.ship();
+  }
+}
+```
+
+1. We’ll rewrite the `calculateShipping()` method so it uses a `switch` statement instead.
+
+    There’s an uninitialized variable `shippingCost` in `calculateShipping()`. Assign the correct value to `shippingCost` using a `switch` statement:
+
+    We’ll check the value of the instance field `shipping`.
+
+    When `shipping` matches `"Regular"`, `shippingCost` should be `0`.
+    When `shipping` matches `"Express"`, `shippingCost` should be `1.75`.
+    The default should assign `.50` to `shippingCost`.
+    **Make sure the method returns** `shippingCost` **after the** `switch` **statement.**
