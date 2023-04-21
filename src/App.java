@@ -125,5 +125,42 @@ public class App {
       System.out.println("F");
     }
     // prints: C
+
+    /*
+     * -----------------------------
+     * Nested Conditional Statements
+     * -----------------------------
+     * 
+     * We can create more complex conditional structures by creating nested conditional statements
+     */
+
+    boolean outerCondition = true;
+    boolean nestedCondition = true;
+
+    if (outerCondition) {
+      if (nestedCondition) {
+        // executes if both conditions are true
+        System.out.println("Both conditions are met!");
+      }
+    }
+
+    int temp = 45;
+    boolean raining = true;
+
+    if (temp < 60) {
+      // temp is 45 which is less than 60
+      // our program will print:
+      // Wear a jacket!
+      System.out.println("Wear a jacket!");
+      if (raining) {
+        // The variable raining is a boolean with a value of true
+        // our proram will print:
+        // Bring your umbrella.
+        System.out.println("Bring your umbrella.");
+      } else {
+        // Our program does not run the following
+        System.out.println("Leave your umbrella home.");
+      }
+    }
   }
 }
